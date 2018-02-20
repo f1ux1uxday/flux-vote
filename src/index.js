@@ -1,5 +1,5 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './app'
+import HomeView from './views/homeView'
 
-render(<App />, document.getElementById('root'))
+render(<HomeView />, document.getElementById('root'))
