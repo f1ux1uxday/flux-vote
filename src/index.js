@@ -1,5 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
-import HomeView from './views/homeView'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 
-render(<HomeView />, document.getElementById('root'))
+import HomeView from './containers/homeView'
+import rootReducer from './reducers/rootReducer'
+
+render(
+  <Provider
+    store={createStore(
+      rootReducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ &&
+      window.__REDUX_DEVTOOLS_EXTENSION__()
+    )}>
+    <HomeView />
+  </Provider>, document.getElementById('root')
+)
