@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
+import { selectQuestion } from '../actions/fv-actionIndex'
 
 class Recent extends Component {
   renderQuestions() {
     return this.props.questions.map(question => {
       return (
         <li
-          key={question.title}>
+          key={question.title}
+          onClick={() => this.props.selectQuestion(question)}>
           {question.title}
         </li>
       )
@@ -31,4 +35,10 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Recent)
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    selectQuestion: selectQuestion,
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Recent)

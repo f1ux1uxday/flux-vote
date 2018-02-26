@@ -3,8 +3,8 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
-import HomeView from './containers/homeView'
-import rootReducer from './reducers/rootReducer'
+import ViewMaster from './containers/fv-viewMaster'
+import rootReducer from './reducers/fv-rootReducer'
 
 render(
   <Provider
@@ -13,6 +13,6 @@ render(
       window.__REDUX_DEVTOOLS_EXTENSION__ &&
       window.__REDUX_DEVTOOLS_EXTENSION__()
     )}>
-    <HomeView />
+    <ViewMaster />
   </Provider>, document.getElementById('root')
 )

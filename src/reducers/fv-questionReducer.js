@@ -2,20 +2,32 @@ export default function() {
   return [
     {
       title: 'Do You Believe In Life After Love?',
-      options: {
-        a: 'Yes',
-        b: 'No',
-        c: 'Kinda',
-      },
+      options: [
+        {
+          a: 'Yes',
+        },
+        {
+          b: 'No',
+        },
+        {
+          c: 'Kinda',
+        },
+      ],
       qid: 1,
     },
     {
       title: 'Are You Ready For The Country?',
-      options: {
-        a: 'Yes',
-        b: 'No',
-        c: 'Kinda',
-      },
+      options: [
+        {
+          choice: 'Yes',
+        },
+        {
+          choice: 'No',
+        },
+        {
+          choice: 'Kinda',
+        },
+      ],
       qid: 2,
     },
     {
