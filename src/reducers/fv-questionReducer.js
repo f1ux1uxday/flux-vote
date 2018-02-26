@@ -4,13 +4,13 @@ export default function() {
       title: 'Do You Believe In Life After Love?',
       options: [
         {
-          a: 'Yes',
+          choice: 'Yes',
         },
         {
-          b: 'No',
+          choice: 'No',
         },
         {
-          c: 'Kinda',
+          choice: 'Kinda',
         },
       ],
       qid: 1,
@@ -32,32 +32,56 @@ export default function() {
     },
     {
       title: 'Why Do Birds Sing So Gay?',
-      options: {
-        a: 'Because fools fall in love',
-        b: 'Because I live in a van down by the river',
-        c: 'Because the bell tolls for thee',
-      },
+      options: [
+        {
+          choice: 'Because fools fall in love',
+        },
+        {
+          choice: 'Because I live in a van down by the river',
+        },
+        {
+          choice: 'Because the bell tolls for thee',
+        },
+      ],
       qid: 3,
     },
     {
       title: 'Who Let The Dogs Out?',
-      options: {
-        a: 'Everybody',
-        b: 'The One-Armed Man',
-        c: 'Nobody. There are no dogs',
-        d: 'Donald Trump'
-      },
+      options: [
+        {
+          choice: 'Everybody',
+        },
+        {
+          choice: 'The One-Armed Man',
+        },
+        {
+          choice: 'Nobody. There are no dogs',
+        },
+        {
+          choice: 'Donald Trump'
+        },
+      ],
       qid: 4,
     },
     {
       title: 'Where Have All The Cowboys Gone?',
-      options: {
-        a: 'Dead',
-        b: 'In hiding',
-        c: 'Dallas',
-        d: 'Gone Fishing',
-        e: 'To the Moon and back'
-      },
+      options: [
+        {
+          choice: 'Dead',
+        },
+        {
+          choice: 'In hiding',
+        },
+        {
+          choice: 'Dallas',
+        },
+        {
+          choice: 'Gone Fishing',
+        },
+        {
+          choice: 'To the Moon and back'
+        },
+      ],
       qid: 5,
     }
   ]
