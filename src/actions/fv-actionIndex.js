@@ -4,3 +4,10 @@ export function selectQuestion(question) {
     payload: question,
   }
 }
+
+export function deselectQuestion() {
+  return {
+    type: 'Q_DESELECTED',
+    payload: null,
+  }
+}
