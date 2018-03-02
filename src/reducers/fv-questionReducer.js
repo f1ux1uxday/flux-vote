@@ -1,4 +1,7 @@
 export default function() {
+  // Eventually this will be replaced by specific DB queries
+  // e.g. recentQuestions makes a call for recent data
+  // and userLogin makes a call for user data
   return [
     {
       title: 'Do You Believe In Life After Love?',

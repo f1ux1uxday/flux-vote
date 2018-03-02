@@ -6,6 +6,8 @@ import { selectQuestion } from '../actions/fv-actionIndex'
 
 class Recent extends Component {
   renderQuestions() {
+    // Eventually these questions will be determined by a DB query
+    // instead of hard-coded array
     return this.props.questions.map(question => {
       return (
         <li
