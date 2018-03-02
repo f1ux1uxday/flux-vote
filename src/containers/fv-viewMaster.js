@@ -8,7 +8,7 @@ import QuestionView from './fv-questionView'
 
 class ViewMaster extends Component {
   render() {
-    if (!this.props.activeQ) {
+    if (this.props.activeQ == null) {
       return (
         <div>
           <Header />

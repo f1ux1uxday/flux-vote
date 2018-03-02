@@ -1,7 +1,5 @@
 /node_modules/
 /public/
 
-.babelrc
-.eslintrc.js
 favicon.ico
 yarn-error.log
