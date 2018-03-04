@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import Header from '../components/fv-header'
-import Navbar from '../components/fv-navbar'
+import Navbar from '../containers/fv-navbar'
 import Recent from './fv-recentQuestions'
 import QuestionView from './fv-questionView'
 

@@ -18,11 +18,6 @@ class Navbar extends Component {
     )
   }
 }
-function mapStateToProps(state) {
-  return {
-    activeQ: state.activeQ,
-  }
-}
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
@@ -30,4 +25,5 @@ function mapDispatchToProps(dispatch) {
   }, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
+// If not using mapStateToProps, pass null in its place
+export default connect(null, mapDispatchToProps)(Navbar)

@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export function selectQuestion(question) {
   return {
     type: 'Q_SELECTED',
@@ -9,5 +11,13 @@ export function deselectQuestion() {
   return {
     type: 'Q_DESELECTED',
     payload: null,
+  }
+}
+
+export function recentQuestions() {
+  let recentQs = axios.get('/api/recent')
+  return {
+    type: 'GET_RECENT',
+    payload: recentQs,
   }
 }

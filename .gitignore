@@ -1,5 +1,6 @@
 /node_modules/
 /public/
+/data/
 
 favicon.ico
 yarn-error.log

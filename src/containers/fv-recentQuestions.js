@@ -2,21 +2,26 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectQuestion } from '../actions/fv-actionIndex'
+import { selectQuestion, recentQuestions } from '../actions/fv-actionIndex'
 
 class Recent extends Component {
+  componentWillMount(){
+    this.props.recentQuestions()
+  }
   renderQuestions() {
     // Eventually these questions will be determined by a DB query
     // instead of hard-coded array
-    return this.props.questions.map(question => {
-      return (
-        <li
-          key={question.title}
-          onClick={() => this.props.selectQuestion(question)}>
-          {question.title}
-        </li>
-      )
-    })
+    if (this.props.questions != null) {
+      return this.props.questions.map(question => {
+        return (
+          <li
+            key={question.title}
+            onClick={() => this.props.selectQuestion(question)}>
+            {question.title}
+          </li>
+        )
+      })
+    }
   }
 
   render() {
@@ -40,6 +45,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     selectQuestion: selectQuestion,
+    recentQuestions: recentQuestions,
   }, dispatch)
 }
 
