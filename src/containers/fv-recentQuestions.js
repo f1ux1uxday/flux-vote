@@ -6,11 +6,11 @@ import { selectQuestion, recentQuestions } from '../actions/fv-actionIndex'
 
 class Recent extends Component {
   componentWillMount(){
+    // Gets the recent question data from collection and it flows into state
+    // through the reducer. Data then mapped from state to props below.
     this.props.recentQuestions()
   }
   renderQuestions() {
-    // Eventually these questions will be determined by a DB query
-    // instead of hard-coded array
     if (this.props.questions != null) {
       return this.props.questions.map(question => {
         return (

@@ -4,6 +4,9 @@ import { connect } from 'react-redux'
 class questionView extends Component {
   getOptions() {
     return this.props.activeQ.options.map(option => {
+      // Attach add-vote click handler to each option,
+      // should be able to make axios.post() here and
+      // avoid state altogether
       return (
         <li
           key={option.choice}>
