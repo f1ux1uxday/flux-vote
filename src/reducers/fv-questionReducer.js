@@ -83,22 +83,35 @@ export default function(state = null, action) {
   //     title: 'Where Have All The Cowboys Gone?',
   //     options: [
   //       {
-  //         choice: 'Dead',
-  //         count: 0,
+  //          oid: 0,
+  //          choice: {
+  //            name:'Dead',
+  //            count: 0,
+  //          },
   //       },
   //       {
-  //         choice: 'In hiding',
-  //         count: 0,
+  //         oid: 1,
+  //         choice: {
+  //           name: 'In hiding',
+  //           count: 0,
+  //         },
   //       },
   //       {
-  //         choice: 'Dallas',
-  //         count: 0,
+  //         oid: 2,
+  //         choice: {
+  //          name:'Dallas',
+  //          count: 0,
+  //         },
   //       },
   //       {
-  //         choice: 'Gone Fishing',
-  //         count: 0,
+  //         oid: 3,
+  //         choice: {
+  //          name: 'Gone Fishing',
+  //          count: 0,
+  //         },
   //       },
   //       {
+  //         oid: 4,
   //         choice: 'To the Moon and back',
   //         count: 0,
   //       },

@@ -2,12 +2,20 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class questionView extends Component {
+// voteHandler(oid){
+//  let qid = this.props.activeQ.qid
+//  axios.post(`/submitvote/${qid}/${oid}`) 
+// }
+
   getOptions() {
     return this.props.activeQ.options.map(option => {
       // Attach add-vote click handler to each option,
       // should be able to make axios.post() here and
       // avoid state altogether
       return (
+        // TODO: delete documents in questionBank and replace with updated
+        // data structure. Option.choice here will need to be option.choice.name
+        // When adding click handler, pass in option.oid
         <li
           key={option.choice}>
           {option.choice}
