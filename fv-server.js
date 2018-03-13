@@ -25,16 +25,16 @@ app.get('/api/recent', (request, response) => {
 })
 
 // Create another route here to update option.count
-// app.post('/submitvote/:qid/:oid', (request, response) => {
-//  let choiceNumber = options[oid].choice
-//  QModel.update(
-//    {qid: request.params.qid},
-//    {$inc: {choiceNumber.count: 1}}, error => {
-    // if(error) {
-    //   response.send('unable to submit vote')
-    // }
-  //})
-// })
+app.post('/submitvote/:qid/:oid', (request, response) => {
+ let choiceNumber = options[oid].choice.count
+ Qodel.update(
+   {qid: request.params.qid},
+   {$inc: {choiceNumber: 1}}, error => {
+    if(error) {
+      response.send('unable to submit vote')
+    }
+  })
+})
 
 var server = app.listen(app.get('port'), function() {
   console.log('listening on port ', server.address().port);

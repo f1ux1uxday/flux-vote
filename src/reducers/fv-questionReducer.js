@@ -7,16 +7,25 @@ export default function(state = null, action) {
   //     title: 'Do You Believe In Life After Love?',
   //     options: [
   //       {
-  //         choice: 'Yes',
-  //         count: 0,
+  //         oid: 0,
+  //         choice: {
+  //           name: 'Yes',
+  //           count: 0,
+  //         }
   //       },
   //       {
-  //         choice: 'No',
-  //         count: 0,
+  //         oid: 1,
+  //         choice: {
+  //           name: 'No',
+  //           count: 0,
+  //         }
   //       },
   //       {
-  //         choice: 'Kinda',
-  //         count: 0,
+  //         oid: 2,
+  //         choice: {
+  //           name: 'Kinda',
+  //           count: 0,
+  //         }
   //       },
   //     ],
   //     qid: 1,
@@ -25,16 +34,25 @@ export default function(state = null, action) {
   //     title: 'Are You Ready For The Country?',
   //     options: [
   //       {
-  //         choice: 'Yes',
-  //         count: 0,
+  //         oid: 0,
+  //         choice: {
+  //           name: 'Yes',
+  //           count: 0,
+  //         }
   //       },
   //       {
-  //         choice: 'No',
-  //         count: 0,
+  //         oid: 1,
+  //         choice: {
+  //           name: 'No',
+  //           count: 0,
+  //         }
   //       },
   //       {
-  //         choice: 'Kinda',
-  //         count: 0,
+  //         oid: 2,
+  //         choice: {
+  //           name: 'Kinda',
+  //           count: 0,
+  //         }
   //       },
   //     ],
   //     qid: 2,
@@ -43,16 +61,25 @@ export default function(state = null, action) {
   //     title: 'Why Do Birds Sing So Gay?',
   //     options: [
   //       {
-  //         choice: 'Because fools fall in love',
-  //         count: 0,
+  //         oid: 0,
+  //         choice: {
+  //           name: 'Because fools fall in love',
+  //           count: 0,
+  //         }
   //       },
   //       {
-  //         choice: 'Because I live in a van down by the river',
-  //         count: 0,
+  //         oid: 1,
+  //         choice: {
+  //           name: 'Because I live in a van down by the river',
+  //           count: 0,
+  //         }
   //       },
   //       {
-  //         choice: 'Because the bell tolls for thee',
-  //         count: 0,
+  //         oid: 2,
+  //         choice: {
+  //           name: 'Because the bell tolls for thee',
+  //           count: 0,
+  //         }
   //       },
   //     ],
   //     qid: 3,
@@ -61,63 +88,77 @@ export default function(state = null, action) {
   //     title: 'Who Let The Dogs Out?',
   //     options: [
   //       {
-  //         choice: 'Everybody',
-  //         count: 0,
-  //       },
-  //       {
-  //         choice: 'The One-Armed Man',
-  //         count: 0,
-  //       },
-  //       {
-  //         choice: 'Nobody. There are no dogs',
-  //         count: 0,
-  //       },
-  //       {
-  //         choice: 'Donald Trump',
-  //         count: 0,
-  //       },
-  //     ],
-  //     qid: 4,
-  //   },
-  //   {
-  //     title: 'Where Have All The Cowboys Gone?',
-  //     options: [
-  //       {
-  //          oid: 0,
-  //          choice: {
-  //            name:'Dead',
-  //            count: 0,
-  //          },
+  //         oid: 0,
+  //         choice: {
+  //           name: 'Everybody',
+  //           count: 0,
+  //         }
   //       },
   //       {
   //         oid: 1,
   //         choice: {
-  //           name: 'In hiding',
+  //           name: 'The One-Armed Man',
   //           count: 0,
-  //         },
+  //         }
   //       },
   //       {
   //         oid: 2,
   //         choice: {
-  //          name:'Dallas',
-  //          count: 0,
-  //         },
+  //           name: 'Nobody. There are no dogs',
+  //           count: 0,
+  //         }
   //       },
   //       {
   //         oid: 3,
   //         choice: {
-  //          name: 'Gone Fishing',
-  //          count: 0,
-  //         },
-  //       },
-  //       {
-  //         oid: 4,
-  //         choice: 'To the Moon and back',
-  //         count: 0,
+  //           name: 'Donald Trump',
+  //           count: 0,
+  //         }
   //       },
   //     ],
-  //     qid: 5,
-  //   }
+  //     qid: 4,
+  //   },
+  // {
+  //   title: 'Where Have All The Cowboys Gone?',
+  //   options: [
+  //     {
+  //        oid: 0,
+  //        choice: {
+  //          name:'Dead',
+  //          count: 0,
+  //        },
+  //     },
+  //     {
+  //       oid: 1,
+  //       choice: {
+  //         name: 'In hiding',
+  //         count: 0,
+  //       },
+  //     },
+  //     {
+  //       oid: 2,
+  //       choice: {
+  //        name:'Dallas',
+  //        count: 0,
+  //       },
+  //     },
+  //     {
+  //       oid: 3,
+  //       choice: {
+  //        name: 'Gone Fishing',
+  //        count: 0,
+  //       },
+  //     },
+  //     {
+  //       oid: 4,
+  //       choice: {
+  //         name: 'To the Moon and back',
+  //         count: 0,
+  //       }
+  //     },
+  //   ],
+  //   qid: 5,
+  // }
   // ]
   switch (action.type) {
   case 'GET_RECENT':

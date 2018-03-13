@@ -17,7 +17,8 @@ render(
         applyMiddleware(promiseMiddleware)
       )
     )
-  }>
+    }
+  >
     <ViewMaster />
   </Provider>, document.getElementById('root')
 )

@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const questionSchema = new Schema({
   title: String,
-  options: Array,
+  options: [{ oid: Number, choice: { name: String, count: Number } }],
   qid: Number,
 })
 
