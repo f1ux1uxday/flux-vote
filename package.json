@@ -8,7 +8,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --hot --inline --colors --progress",
-    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node fv-server.js"
+    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node fv-server.js",
+    "debug": "./node_modules/webpack/bin/webpack.js -p --progress && DEBUG=express:* node fv-server.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -26,6 +27,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "mongoose": "^5.0.8",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
