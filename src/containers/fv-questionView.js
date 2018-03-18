@@ -5,7 +5,7 @@ import axios from 'axios'
 class questionView extends Component {
   voteHandler(oid){
     let qid = this.props.activeQ.qid
-    axios.post(`/submitvote/${qid}/${oid}`)
+    axios.get(`/submitvote/${qid}/${oid}`)
   }
 
   getOptions() {
