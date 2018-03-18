@@ -32,39 +32,6 @@ app.get('/api/recent', (request, response) => {
 app.get('/submitvote/:qid/:oid', (request, response) => {
   let opID = request.params.oid
   let qID = request.params.qid
-  // let choiceNum = options.opID.choice.count
-  // Questions.findOne(
-  //   { "qid": qID, 'options.oid': opID },
-  //   // { $inc: { 'options.opID.choice.count': 1}},
-  //   (error, result) => {
-  //    console.log(result.options[opID].choice.name)
-  //    console.log(result.options[opID].choice.count)
-  //    // result[0].options[opID].choice.count.increment()
-  //    if (error){
-  //      console.log(error)
-  //    } else {
-  //      console.log(result)
-  //    }
-  //    result.update(
-  //      // {qid: qID},
-  //      {$inc: {'options.$.choice.count': 1}},
-  //      (err, things) => {
-  //        if (err) {
-  //          console.log(err)
-  //        } else {
-  //          console.log(things)
-  //        }
-  //      }
-  //    )
-     // result[0].options[opID].set(choice.count, 1)
-     // result[0].save((err, res) => {
-     //   if (err) {
-     //     console.log(err)
-     //   } else {
-     //     console.log(res)
-     //   }
-     // })
-   // })
   Questions.update(
      { qid: qID , 'options.oid': opID},
      { $inc: { 'options.$.choice.count': 1} },
