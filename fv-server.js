@@ -28,21 +28,21 @@ app.get('/api/recent', (request, response) => {
   })
 })
 
-// Create another route here to update option.count
+// Request contains parameters used to update collection
 app.get('/submitvote/:qid/:oid', (request, response) => {
   let opID = request.params.oid
   let qID = request.params.qid
   Questions.update(
-     { qid: qID , 'options.oid': opID},
-     { $inc: { 'options.$.choice.count': 1} },
-     { new: true },
-     (err, thing) => {
-       if (err) {
-         console.log(err)
-       } else {
-         console.log(thing)
-       }
-     }
+    { qid: qID , 'options.oid': opID},
+    { $inc: { 'options.$.choice.count': 1} },
+    { new: true },
+    (err, result) => {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log(result)
+      }
+    }
   )
   response.end()
 })

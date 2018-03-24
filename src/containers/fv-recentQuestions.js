@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { selectQuestion, recentQuestions } from '../actions/fv-actionIndex'
 
 class Recent extends Component {
-  componentWillMount(){
+  componentWillMount() {
     // Gets the recent question data from collection and it flows into state
     // through the reducer. Data then mapped from state to props below.
     this.props.recentQuestions()
