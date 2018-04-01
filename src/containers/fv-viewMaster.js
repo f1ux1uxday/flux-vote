@@ -16,6 +16,15 @@ class ViewMaster extends Component {
           <Recent />
         </div>
       )
+      // Create another view for question creation.
+      // if (this.props.createNew == 'yes') {
+      //  render (
+      //    <Header />
+      //    <Navbar />
+      //    <Create />
+      //  )
+      // }
+      //
     } else {
       return (
         <div>

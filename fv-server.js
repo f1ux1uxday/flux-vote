@@ -47,6 +47,8 @@ app.get('/submitvote/:qid/:oid', (request, response) => {
   response.end()
 })
 
+// Create a POST route for question creation
+
 const server = app.listen(app.get('port'), function() {
   console.log('listening on port ', server.address().port);
 });

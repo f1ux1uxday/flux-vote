@@ -5,6 +5,10 @@ import { connect } from 'react-redux'
 import { deselectQuestion } from '../actions/fv-actionIndex'
 
 class Navbar extends Component {
+  // Add 'new' nav element for creating new question
+  // Render only if loggedIn -- use if/then to render
+  // conditionally one navbar for guests and one for
+  // registered users.
   render() {
     return (
       <div className='nav-bar'>
