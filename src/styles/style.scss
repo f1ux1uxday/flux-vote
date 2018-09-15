@@ -1,17 +1,21 @@
-$body-bg: #e5b5e5;
+$primary: #e595e5;
+$secondary: #c656b8;
+
+$body-bg: #d5d5d5;
 $body-fg: #1dab38;
 $body-font: Roboto;
 
-$title-fg: #d5d5d5;
-$subtitle-fg: #99e;
+$title-fg: #f7f7f7;
 $shadow-bg: #af2b5e;
-
-$nav-fg: #ba8181;
 
 $header-one-fg: #580;
 $header-five-fg: #db5555;
 
-$list-item: #d78181;
+$list-item: $primary;
+
+* {
+  border-radius: 5px;
+}
 
 body {
   font-family: $body-font;
@@ -54,6 +58,7 @@ body {
 }
 
 .nav-bar {
+  background-color: $primary;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -76,28 +81,71 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: $secondary;
   border: 2px solid $title-fg;
   box-shadow: 1px 1px 1px $shadow-bg;
   margin: 0 15%;
 
   .sub-heading {
     font-size: 1.88rem;
-    color: $subtitle-fg;
-    border: 2px solid $title-fg;
-    box-shadow: 1px 1px 1px $shadow-bg;
-    margin: 1% 0;
-    padding: .5% 1.5%;
+    color: $title-fg;
+    margin: 0;
+    margin-top: .5%;
   }
   .recent-list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     list-style-type: none;
+    width: 75%;
+    padding: .5% 1.5%;
   }
 
   .recent-question {
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
+    background-color: $primary;
+    color: $secondary;
+    border: 2px solid $title-fg;
+    box-shadow: 1px 1px 1px $shadow-bg;
+    padding: 1% 2%;
+  }
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary;
+  border: 2px solid $title-fg;
+  box-shadow: 1px 1px 1px $shadow-bg;
+  margin: 0 15%;
+
+  .question-title {
+    font-size: 1.88rem;
+    color: $title-fg;
+    margin: 0;
+    margin-top: .5%;
+  }
+  .question-option-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 75%;
+    padding: .5% 1.5%;
+  }
+
+  .question-option {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: $primary;
+    color: $secondary;
+    border: 2px solid $title-fg;
+    box-shadow: 1px 1px 1px $shadow-bg;
+    padding: 1% 2%;
   }
 }

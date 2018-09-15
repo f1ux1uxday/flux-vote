@@ -17,7 +17,7 @@ class questionView extends Component {
         // TODO: delete documents in questionBank and replace with updated
         // data structure. Option.choice here will need to be option.choice.name
         // When adding click handler, pass in option.oid
-        <li
+        <li className='question-option'
           key={`${this.props.activeQ.qid}-${option.oid}`}
           onClick={() => this.voteHandler(option.oid)}>
           {option.choice.name}
@@ -28,9 +28,9 @@ class questionView extends Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.props.activeQ.title}</h1>
-        <ul>{this.getOptions()}</ul>
+      <div className='question-container'>
+        <h1 className='question-title'>{this.props.activeQ.title}</h1>
+        <ul className='question-option-list'>{this.getOptions()}</ul>
       </div>
     )
   }

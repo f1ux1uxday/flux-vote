@@ -29,6 +29,7 @@ class ViewMaster extends Component {
       return (
         <div>
           <Navbar />
+          <Header />
           <QuestionView />
 
         </div>
