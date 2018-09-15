@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --hot --inline --colors --progress",
+    "dev": "webpack-dev-server --hot --inline --colors --progress && DEBUG=express:* node fv-server.js",
     "start": "./node_modules/webpack/bin/webpack.js -p --progress && node fv-server.js",
     "debug": "./node_modules/webpack/bin/webpack.js -p --progress && DEBUG=express:* node fv-server.js"
   },

@@ -10,9 +10,9 @@ class ViewMaster extends Component {
   render() {
     if (this.props.activeQ == null) {
       return (
-        <div>
-          <Header />
+        <div className='container'>
           <Navbar />
+          <Header />
           <Recent />
         </div>
       )

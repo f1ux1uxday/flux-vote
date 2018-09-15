@@ -14,7 +14,7 @@ class Recent extends Component {
     if (this.props.questions != null) {
       return this.props.questions.map(question => {
         return (
-          <li
+          <li className='recent-question'
             key={question.title}
             onClick={() => this.props.selectQuestion(question)}>
             {question.title}
@@ -27,8 +27,8 @@ class Recent extends Component {
   render() {
     return (
       <div className='recent-polls'>
-        <h5> -Newest Polls- </h5>
-        <ul>
+        <h5 className='sub-heading'>Newest Polls</h5>
+        <ul className='recent-list'>
           {this.renderQuestions()}
         </ul>
       </div>
