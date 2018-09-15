@@ -10,17 +10,35 @@ class Navbar extends Component {
   // conditionally one navbar for guests and one for
   // registered users.
   render() {
-    return (
-      <div className='nav-bar'>
-        <nav
-          onClick={() => this.props.deselectQuestion()}>
-          home
-        </nav>
-        <nav> random </nav>
-        <nav> login </nav>
-        <nav> new </nav>
-      </div>
-    )
+    if (this.props.user == true) {
+      return (
+        <div className='nav-bar'>
+          <nav
+            onClick={() => this.props.deselectQuestion()}>
+            home
+          </nav>
+          <nav> random </nav>
+          <nav> new </nav>
+        </div>
+      )
+    } else {
+      return (
+        <div className='nav-bar'>
+          <nav
+            onClick={() => this.props.deselectQuestion()}>
+            home
+          </nav>
+          <nav> random </nav>
+          <nav> login </nav>
+        </div>
+      )
+    }
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    user: state.user, 
   }
 }
 
@@ -31,4 +49,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 // If not using mapStateToProps, pass null in its place
-export default connect(null, mapDispatchToProps)(Navbar)
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
