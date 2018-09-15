@@ -18,6 +18,7 @@ class Navbar extends Component {
         </nav>
         <nav> random </nav>
         <nav> login </nav>
+        <nav> new </nav>
       </div>
     )
   }

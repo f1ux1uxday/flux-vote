@@ -7,6 +7,8 @@ import promiseMiddleware from 'redux-promise'
 import ViewMaster from './containers/fv-viewMaster'
 import rootReducer from './reducers/fv-rootReducer'
 
+import './styles/style.scss'
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 render(
