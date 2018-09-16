@@ -1,40 +1,11 @@
-$primary: #e595e5;
-$secondary: #c656b8;
-
-$body-bg: #d5d5d5;
-$body-fg: #1dab38;
-$body-font: Roboto;
-
-$title-fg: #f7f7f7;
-$shadow-bg: #af2b5e;
-
-$header-one-fg: #580;
-$header-five-fg: #db5555;
-
-$list-item: $primary;
-
-* {
-  border-radius: 5px;
-}
+@import 'variables';
+@import 'mixins';
 
 body {
   font-family: $body-font;
   background-color: $body-bg;
-  color: $body-fg;
 
   cursor: crosshair;
-
-  h1 {
-    color: $header-one-fg;
-  }
-
-  h5 {
-    color: $header-five-fg;
-  }
-
-  li {
-    color: $list-item;
-  }
 }
 
 .container {
@@ -58,14 +29,13 @@ body {
 }
 
 .nav-bar {
+  @include borderStyle;
   background-color: $primary;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: auto 15%;
-  border: 2px solid $title-fg;
-  box-shadow: 1px 1px 1px $shadow-bg;
 
   nav {
     font-weight: bold;
@@ -76,76 +46,18 @@ body {
   }
 }
 
-.recent-polls {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: $secondary;
-  border: 2px solid $title-fg;
-  box-shadow: 1px 1px 1px $shadow-bg;
-  margin: 0 15%;
-
-  .sub-heading {
-    font-size: 1.88rem;
-    color: $title-fg;
-    margin: 0;
-    margin-top: .5%;
-  }
-  .recent-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 75%;
-    padding: .5% 1.5%;
-  }
-
-  .recent-question {
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: $primary;
-    color: $secondary;
-    border: 2px solid $title-fg;
-    box-shadow: 1px 1px 1px $shadow-bg;
-    padding: 1% 2%;
-  }
+.recent-polls, .questionContainer {
+  @include questionContainer;
 }
 
-.question-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: $secondary;
-  border: 2px solid $title-fg;
-  box-shadow: 1px 1px 1px $shadow-bg;
-  margin: 0 15%;
+.sub-heading, .question-title {
+    @include containerTitle;
+}
 
-  .question-title {
-    font-size: 1.88rem;
-    color: $title-fg;
-    margin: 0;
-    margin-top: .5%;
-  }
-  .question-option-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 75%;
-    padding: .5% 1.5%;
-  }
+.recent-list, .question-option-list {
+    @include containerList;
+}
 
-  .question-option {
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: $primary;
-    color: $secondary;
-    border: 2px solid $title-fg;
-    box-shadow: 1px 1px 1px $shadow-bg;
-    padding: 1% 2%;
-  }
+.recent-question, .question-option {
+    @include containerListItem;
 }

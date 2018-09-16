@@ -1,7 +1,8 @@
-const path = require('path');
+const path = require('path')
 const compression = require('compression')
-const mongoose = require('mongoose').set('debug', true);
-const express = require('express');
+const mongoose = require('mongoose').set('debug', true)
+const express = require('express')
+const favicon = require('serve-favicon')
 
 const Questions = require('./src/models/fv-questionsModel')
 
@@ -11,11 +12,12 @@ mongoose.connect('mongodb://localhost/FVDB', err => {
   }
 })
 
-const app = express();
+const app = express()
 
 app.use(compression())
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('port', process.env.PORT || 8080);
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(express.static(path.join(__dirname, 'public')))
+app.set('port', process.env.PORT || 8080)
 
 app.get('/api/recent', (request, response) => {
   // Get documents and perform callback on recentQuestions data
@@ -50,5 +52,5 @@ app.get('/submitvote/:qid/:oid', (request, response) => {
 // Create a POST route for question creation
 
 const server = app.listen(app.get('port'), function() {
-  console.log('listening on port ', server.address().port);
-});
+  console.log('listening on port ', server.address().port)
+})
